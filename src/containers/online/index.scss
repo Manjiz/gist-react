@@ -1,0 +1,24 @@
+.online {
+  padding: 50px;
+}
+
+.line {
+  fill: none;
+  stroke: #ffab00;
+  stroke-width: 3;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.dot {
+  fill: #ffab00;
+  stroke: #fff;
+}
+
+circle.focus {
+  fill: transparent;
+  stroke: steelblue;
+}
