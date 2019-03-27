@@ -55,7 +55,7 @@ class Online extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.tickData()
     }, 5000)
     this.createLineChart()
@@ -63,6 +63,12 @@ class Online extends Component {
 
   componentDidUpdate() {
     this.updateLineChart()
+  }
+
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval)
+    }
   }
 
   tickData() {
